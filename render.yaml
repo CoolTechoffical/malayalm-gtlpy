@@ -1,5 +1,4 @@
 services:
   - name: malayalam-gtlpy
-    buildCommand: python malayalam_chatgpt_bot.py
-    startCommand: python malayalam_chatgpt_bot.py
+    buildCommand: python path/to/malayalam_chatgpt_bot.py
     # Add other configuration settings as needed
