@@ -2,10 +2,22 @@ from pyrogram import Client, filters
 import openai
 
 # Your OpenAI API key
-openai.api_key = 'sk-proj-YbIcYTflSunu6Tr9io9tT3BlbkFJ7mRBegKdBmogebwc8a2B'
+openai.api_key = 'your_openai_api_key'
+
+# Your API ID and API hash obtained from https://my.telegram.org/auth
+api_id = 'your_api_id'
+api_hash = 'your_api_hash'
+
+# Your bot token obtained from BotFather
+bot_token = 'your_bot_token'
 
 # Create Pyrogram client
-app = Client("malayalam_chatgpt_bot")
+app = Client(
+    "malayalam_chatgpt_bot",
+    api_id=api_id,
+    api_hash=api_hash,
+    bot_token=bot_token
+)
 
 # Function to generate Malayalam text using GPT
 def generate_malayalam_text(prompt):
