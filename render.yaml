@@ -1,0 +1,6 @@
+# render.yaml (or similar configuration file)
+services:
+  - name: malayalam-gtlpy
+    type: web
+    buildCommand: python malayalam_chatgpt_bot.py
+    # Add other configuration settings as needed
