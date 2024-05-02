@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 import openai
 
 # Your OpenAI API key
-openai.api_key = 'YOUR_OPENAI_API_KEY'
+openai.api_key = 'sk-proj-YbIcYTflSunu6Tr9io9tT3BlbkFJ7mRBegKdBmogebwc8a2B'
 
 # Create Pyrogram client
 app = Client("malayalam_chatgpt_bot")
