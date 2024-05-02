@@ -1,4 +1,56 @@
-services:
-  - name: malayalam-gtlpy
-    buildCommand: python path/to/malayalam_chatgpt_bot.py
-    # Add other configuration settings as needed
+# render.yaml
+
+# Specifies the build command to install dependencies
+buildCommand: pip install -r requirements.txt
+
+# Specifies the start command to run the Flask application
+startCommand: python app.py
+
+# Specifies the runtime environment and version
+env: python
+
+# Specifies the version of Python to use
+pythonVersion: 3.9
+
+# Specifies the web service type
+# Options: web (default), background, scheduled
+type: web
+
+# Specifies the health check configuration
+healthCheckPath: /
+healthCheckIntervalSeconds: 30
+healthCheckTimeoutSeconds: 5
+
+# Specifies the disk size for the service
+disk: 10
+
+# Specifies the number of instances to run
+instances: 1
+
+# Specifies the environment variables
+# envVars:
+#   KEY: VALUE
+
+# Specifies the port on which the service listens
+# port: 8080
+
+# Specifies the URL to fetch for a Blueprint
+# blueprint:
+#   url: https://example.com/blueprint.yaml
+
+# Specifies the execution timeout for the start command
+# timeoutSeconds: 300
+
+# Specifies the secrets used by the service
+# secrets:
+#   - name: SECRET_NAME
+#     mountPath: /path/in/container
+#     envVar: SECRET_ENV_VAR
+#     fileName: secret.txt
+#   - name: ANOTHER_SECRET
+#     mountPath: /another/path
+#     envVar: ANOTHER_SECRET_ENV_VAR
+
+# Specifies additional commands to run after deployment
+# postDeploy:
+#   - echo "Post deploy script executed successfully"
